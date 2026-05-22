@@ -17,6 +17,11 @@ int main() {
         double userInput;
         cin >> userInput;
 
+        if (cin.fail()) {
+            cout << "Folse" << endl;
+            break;
+        }
+
         int n = userInput;
         auto start = high_resolution_clock::now();
 

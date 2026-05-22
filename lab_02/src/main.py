@@ -1,17 +1,22 @@
 import time
 
 def compute(x):
-    return x*x - x*x + 4*x - 5*x + x + x
+    return x*x - x*x + 4*x - 5*x + x + x 
 
 def main():
     while True:
-        user_input = input("Enter number of iterations (integer): ")
-        n = int(user_input)
+        try:
+            user_input = input("N= ")
+            n = int(user_input)
+        except ValueError:
+            print("False.")
+            break
+
 
         start = time.perf_counter()
         result = 0
         for i in range(n):
-            result = compute(i)   
+            result = compute(i)
         end = time.perf_counter()
 
         elapsed_us = (end - start) * 1_000_000
