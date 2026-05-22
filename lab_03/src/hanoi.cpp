@@ -53,7 +53,7 @@ void freeList(Node* head) {
 }
 
 int main() {
-    const int DISKS = 5;
+    const int DISKS = 3;
     Node* head = nullptr;
     Node* tail = nullptr;
 
